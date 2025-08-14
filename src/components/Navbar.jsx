@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -6,14 +7,14 @@ const Navbar = () => {
   return (
     <div className="w-full h-16 md:h-20 flex items-center justify-between">
       {/* LOGO */}
-      <div className="flex items-center gap-4 text-2xl font-bold">
+      <Link to="/" className="flex items-center gap-4 text-2xl font-bold">
         <img
           src="/ae2craft-logo.png"
           className="w-16 h-16 drop-shadow-[0_0_6px_rgba(255,109,0,0.5)]"
-          alt="AE2Craft Logo"
+          alt="P2p Craft Logo"
         />
         <span>P2P Craft</span>
-      </div>
+      </Link>
 
       {/* MOBILE MENU */}
       <div className="md:hidden">
@@ -30,29 +31,29 @@ const Navbar = () => {
             open ? "-right-0" : "-right-[100%]"
           }`}
         >
-          <a href="/">Home</a>
-          <a href="/">Trending</a>
-          <a href="/">Most Popular</a>
-          <a href="/">About</a>
-          <a href="/">
+          <Link to="/">Home</Link>
+          <Link to="/">Trending</Link>
+          <Link to="/">Most Popular</Link>
+          <Link to="/">About</Link>
+          <Link to="/">
             <button className="py-2 px-4 round-3xl bg-blue-800 text-white">
               Login{" "}
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 
       {/* DESKTOP MENU */}
       <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
-        <a href="/">Home</a>
-        <a href="/">Trending</a>
-        <a href="/">Most Popular</a>
-        <a href="/">About</a>
-        <a href="/">
+        <Link to="/">Home</Link>
+        <Link to="/">Trending</Link>
+        <Link to="/">Most Popular</Link>
+        <Link to="/">About</Link>
+        <Link to="/">
           <button className="py-2 px-4 round-3xl bg-blue-800 text-white">
             Login{" "}
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );
