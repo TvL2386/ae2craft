@@ -33,23 +33,28 @@ const Navbar = () => {
           }`}
         >
           <Link to="/">Home</Link>
-          <Link to="/">Trending</Link>
-          <Link to="/">Most Popular</Link>
-          <Link to="/">About</Link>
-          <Link to="/">
-            <button className="py-2 px-4 round-3xl bg-blue-800 text-white">
-              Login
-            </button>
-          </Link>
+          <SignedIn>
+            <Link to="/cc">Command Center</Link>
+          </SignedIn>
+          <SignedOut>
+            <Link to="/login">
+              <button className="py-2 px-4 rounded-3xl bg-orange-800 text-white">
+                Login
+              </button>
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </div>
 
       {/* DESKTOP MENU */}
       <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
         <Link to="/">Home</Link>
-        <Link to="/">Trending</Link>
-        <Link to="/">Most Popular</Link>
-        <Link to="/">About</Link>
+        <SignedIn>
+          <Link to="/cc">Command Center</Link>
+        </SignedIn>
         <SignedOut>
           <Link to="/login">
             <button className="py-2 px-4 rounded-3xl bg-orange-800 text-white">
