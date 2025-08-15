@@ -11,5 +11,9 @@ body {
 
 a,
 .accent {
-  color: #ff6d00;
+  color: #d36a19;
+}
+
+.text-orange {
+  color: #db8543;
 }
